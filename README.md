@@ -80,6 +80,9 @@ Every page has a dark-themed sibling for comfort browsing at night:
 ```
 e.g., home.html → d-home.html
 ```
+![image](https://github.com/user-attachments/assets/1cde4332-3e0f-49b6-b47e-2478f25168da)
+![image](https://github.com/user-attachments/assets/da8035f5-d6cd-4fcd-93a6-06a99632940c)
+
 
 Perfect for gamers who live in the shadows 🎮🌑
 
