@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <title>Resources - Gameverse</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            color: #000000;
+            background-color: #92a0ac;
+            font-family: 'Poppins', sans-serif;
+           
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+            width: 95%;
+            height: 60px;
+            padding: 0 20px;
+            position: fixed;
+            top: 10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 30px;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .navbar-logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #8800ffc7;
+        }
+
+        /* Content Styling */
+        .background{
+            background-image: url('images/light-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+        .background h1 {
+            font-family: 'Poppins', sans-serif;
+            color: #000000;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(90deg, #6ed8ff, #ff77ed);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .main-div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .main-div h1 {
+            color: #000000;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .main-div h2 {
+            color: #000000;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Tab Buttons */
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .tab-button {
+            color: #000000;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .tab-button:hover {
+            background-color: #9e2eff;
+            color: #fff;
+        }
+ 
+.news-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 50px;
+    padding-top: 10%;
+}
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 30%; /* Each card will take 30% of the container width */
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 32%; /* Ensures no card exceeds a max width */
+}
+
+.blog-card:hover {
+    transform: scale(1.03);
+}
+
+/* Blog Image */
+.blog-image {
+    position: relative;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures images are not distorted */
+    display: block;
+}
+
+/* Blog Tag */
+.blog-image .tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #000000;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Blog Content */
+.blog-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.blog-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 5px 0;
+}
+.carousel {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 9s ease-in-out;
+}
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+.carousel-images {
+    animation: slide 9s infinite;
+}
+
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .blog-card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog-card {
+      width: calc(50% - 10px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blog-card {
+      width: 100%;
+    }
+  }
+  .faq-item {
+    margin-bottom: 15px;
+  }
+  
+  .faq-item label {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .faq-item label:hover {
+    background: transparent;
+  }
+  
+  .faq-item input[type="checkbox"] {
+    display: none;
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: transparent;
+    border-radius: 4px;
+    margin-top: 5px;
+    padding: 0 10px;
+    color: #000000;
+  }
+  
+  .faq-item input[type="checkbox"]:checked + .faq-answer {
+    max-height: 100px;
+    padding: 10px;
+  }
+
+.date {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-bottom: 10px;
+}
+.c-tab-button{
+            background-color: #9e2eff;
+            color: #ffffff;
+            transform: scale(1.1);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+        /* Footer */
+        .footer {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    color: #000000;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+    border-radius: 20px;
+  }
+  
+  .social-icon img:hover {
+    transform: scale(1.1);
+  }
+  .image-button img {
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+    border-radius: 20px; /* Optional: Gives rounded corners */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-button img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Add a glowing effect */
+  }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo"> 
+                <img src="images/image.png" alt="Logo">Gameverse</div>
+            <ul class="nav-links">
+              <li><a href="home.html">Home</a></li>
+                  <li><a href="community-news.html">Community News</a></li>
+                  <li><a href="events.html">Local Events</a></li>
+                  <li><a href="directory.html">Directory</a></li>
+                  <li><a href="tutorials.html">Resources</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="d-game-updates.html" class="image-button"><img src="images/darkmode.png" alt="Toggle Dark Mode"></a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="background">
+        <h1>Game Updates</h1>
+        <div class="tab-buttons">
+           <button class="tab-button" onclick="window.location.href='tutorials.html'">Tutorials</button>
+            <button class="tab-button" onclick="window.location.href='discordservers.html'">Discord Servers</button>
+            <button class="c-tab-button" onclick="window.location.href='game-updates.html'">Game Updates</button>
+        </div>
+    </div>
+    <main class="main-div">
+            <div class="news-cards">
+                <!-- Card 1 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div class="carousel">
+                            <div class="carousel-images">
+                                <img src="images/gr.jpg" alt="Image 1">
+                                <img src="images/gr2.jpg" alt="Image 2">
+                                <img src="images/gr3.jpg" alt="Image 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <p class="date">November 15, 2024</p>
+                        <div class="faq-item">
+                            <label for="faq-1" class="blog-title">Gran Turismo 7</label>
+                            <input type="checkbox" id="faq-1">
+                            <div class="faq-answer">
+                                <p>Gran Turismo 7 launches its 1.54 update with five new cars, including the Porsche Mission X, Porche 911 Turbo S, Ford Escort RS Cosworth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div class="carousel">
+                            <div class="carousel-images">
+                                <img src="images/pay4.webp" alt="Image 1">
+                                <img src="images/pay6.jpg" alt="Image 2">
+                                <img src="images/pay7.png" alt="Image 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <p class="date">November 8, 2024</p>
+                        <div class="faq-item">
+                            <label for="faq-2" class="blog-title">Payday 3</label>
+                            <input type="checkbox" id="faq-2">
+                            <div class="faq-answer">
+                                <p>Payday 3 is going back to the series' roots, with the First World Bank heist coming to the game this December.Bringing back a fan-favorite level is likely more than just a way to expand the game.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 with Accordion -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div class="carousel-images">
+                            <img src="images/diablo.jpg" alt="Image 1">
+                            <img src="images/diablo2.avif" alt="Image 2">
+                            <img src="images/diablo3.avif" alt="Image 3">
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <p class="date">November 1, 2024</p>
+                        <div class="faq-item">
+                            <label for="faq-3" class="blog-title">Diablo IV</label>
+                            <input type="checkbox" id="faq-3">
+                            <div class="faq-answer">
+                                <p>The Diablo 4 development team reveals several quality-of-life changes that will appear in the popular action RPG's next season.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+          <p>&copy; 2024 Gameverse</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" class="social-icon">
+              <img src="images/f.png" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" class="social-icon">
+              <img src="images/t.png" alt="Twitter">
+            </a>
+            <a href="https://www.youtube.com" class="social-icon">
+              <img src="images/y.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com" class="social-icon">
+              <img src="images/i.png" alt="Instagram">
+            </a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

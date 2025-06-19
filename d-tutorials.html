@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <title>Resources - Gameverse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-color: #4c60a8 #1a2032;
+}
+        body {
+            margin: 0;
+            color: #333;
+            background-color: #0c081f;
+            font-family: 'Poppins', sans-serif;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.5);
+            width: 95%; 
+            height: 60px; 
+            padding: 0 20px; 
+            position: fixed;
+            top: 10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto; 
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            border-radius: 30px;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #8800ffc7;
+        }
+
+        /* Tutorials Section */
+        .tutorials {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10%;
+            background-image: url('https://assets.communitygaming.io/newHomepageVisitor/hero-bg-new.jpg');
+            background-repeat: no-repeat;
+             background-size:cover;
+            background-position:center ;
+
+        }
+
+        .tutorials h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            background: linear-gradient(90deg, #90bcff, #13ff90);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tutorial-div{
+            background-color: #0c081f;
+            padding: 5%;
+            margin-top: 0%;
+            align-items: center;
+        }
+
+        .tutorial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto; 
+        }
+
+        .tutorial-card {
+            background: rgba(255, 255, 255, 0.1); 
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            text-align: center;
+            padding: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .tutorial-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .tutorial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .tutorial-card h2 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tutorial-card p {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .tutorial-button {
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease-in-out;
+            background-color: #8800ffc7;
+        }
+
+        .tutorial-button:hover {
+            background-color: #9e2eff;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            font-size: 0.9rem;
+        }
+ /* Tab Buttons */
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .tab-button {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .tab-button:hover {
+            background-color: #8800ffc7;
+            color: #fff;
+        }
+        .c-tab-button{
+            background-color: #9e2eff;
+            color: #fff;
+            transform: scale(1.1);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        .footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icon img:hover {
+    transform: scale(1.1);
+  }
+  .image-button img {
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+    border-radius: 20px; /* Optional: Gives rounded corners */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-button img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Add a glowing effect */
+  }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo"> 
+                <img src="logo.jpg" alt="Logo">Gameverse</div>
+            <ul class="nav-links">
+                <li><a href="d-home.html">Home</a></li>
+                <li><a href="d-community-news.html">Community News</a></li>
+                <li><a href="d-events.html">Local Events</a></li>
+                <li><a href="d-directory.html">Directory</a></li>
+                <li><a href="d-tutorials.html">Resources</a></li>
+                <li><a href="d-contact.html">Contact</a></li>
+            </ul>
+            <a href="tutorials.html" class="image-button"><img src="images/light-mode.png" alt="Toggle Light Mode"></a>
+        </nav>
+    </header>
+
+    <!-- Tutorials Section -->
+    <main class="tutorials">
+        <!-- Tab Buttons -->
+        <h1>Tutorial Channels</h1>
+        <div class="tab-buttons">
+            <button class="c-tab-button" onclick="window.location.href='d-tutorials.html'">Tutorials</button>
+            <button class="tab-button" onclick="window.location.href='d-discordservers.html'">Discord Servers</button>
+            <button class="tab-button" onclick="window.location.href='d-game-updates.html'">Game Updates</button>
+        </div>
+    </main>
+        <div class="tutorial-div">
+        <div class="tutorial-grid">
+            <!-- GameSpot Tutorials -->
+            <div class="tutorial-card">
+                <img src="images/g.jfif" alt="GameSpot">
+                <h2>GameSpot</h2>
+                <p>Discover guides and strategies for top-tier games.</p>
+                <button class="tutorial-button" onclick="window.location.href='https://www.youtube.com/user/gamespot'"><strong>Visit Channel</strong></button>
+            </div>
+
+            <!-- IGN -->
+            <div class="tutorial-card">
+                <img src="images/ign.png" alt="IGN">
+                <h2>IGN</h2>
+                <p>Get insider tips and walkthroughs from the pros at IGN.</p>
+                <button class="tutorial-button" onclick="window.location.href='https://www.youtube.com/user/IGNentertainment'"><strong>Visit Channel</strong></button>
+            </div>
+
+            <!-- ProGuides -->
+            <div class="tutorial-card">
+                <img src="images/pro.jfif" alt="ProGuides">
+                <h2>ProGuides</h2>
+                <p>Elevate your gaming skills with expert tutorials.</p>
+                <button class="tutorial-button" onclick="window.location.href='https://www.youtube.com/c/ProGuides'"><strong>Visit Channel</strong></button>
+            </div>
+
+            <!-- Game Maker's Toolkit -->
+            <div class="tutorial-card">
+                <img src="images/gm.jfif" alt="Game Maker's Toolkit">
+                <h2>Game Maker's Toolkit</h2>
+                <p>Dive into the science of game design and mechanics.</p>
+                <button class="tutorial-button" onclick="window.location.href='https://www.youtube.com/c/GameMakersToolkit'"><strong>Visit Channel</strong></button>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+          <p>&copy; 2024 Gameverse</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" class="social-icon">
+              <img src="images/d-f.png" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" class="social-icon">
+              <img src="images/d-t.png" alt="Twitter">
+            </a>
+            <a href="https://www.youtube.com" class="social-icon">
+              <img src="images/d-y.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com" class="social-icon">
+              <img src="images/d-i.png" alt="Instagram">
+            </a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

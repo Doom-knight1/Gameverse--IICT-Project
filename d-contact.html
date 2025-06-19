@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <title>Contact - Gameverse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-color: #4c60a8 #1a2032;
+}
+        body {
+            margin: 0;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0c081f;
+            background-image: url('https://assets.communitygaming.io/newHomepageVisitor/hero-bg-new.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.5);
+            width: 95%;
+            height: 60px; 
+            padding: 0 20px; 
+            position: fixed;
+            top: 10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto; 
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            border-radius: 30px;
+            
+        }
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #8800ffc7;
+        }
+
+        /* Contact Section */
+        .contactus {
+            margin-top: 150px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .contactus h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(90deg, #90bcff, #13ff90);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color:#fff;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color:#ffffff61;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color:#fff;
+        }
+
+        .contact-form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            color:#fff;
+
+        }
+
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+            color:#fff;
+        }
+        .contact-form input{
+            background-color:#0000006b;
+        }
+
+
+        .contact-form textarea {
+            resize: none;
+            height: 120px;
+            background-color:#0000006b;
+        }
+
+        .contact-form button {
+            background-color: #8800ffc7;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #9e2eff;
+        }
+        .map iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+        .div-background{
+            background-color: #0c081f;
+            padding: 10%;
+            margin-top: 10%;
+            align-content: center;      
+        }
+
+        /* Footer */
+        .footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icon img:hover {
+    transform: scale(1.1);
+  }
+  .image-button img {
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+    border-radius: 20px; /* Optional: Gives rounded corners */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-button img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 0 10px rgb(255, 255, 255); /* Add a glowing effect */
+  }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo"> 
+                <img src="images/logo.jpg" alt="Logo">Gameverse</div>
+            <ul class="nav-links">
+                <li><a href="d-home.html">Home</a></li>
+                <li><a href="d-community-news.html">Community News</a></li>
+                <li><a href="d-events.html">Local Events</a></li>
+                <li><a href="d-directory.html">Directory</a></li>
+                <li><a href="d-tutorials.html">Resources</a></li>
+                <li><a href="d-contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="image-button"><img src="images/light-mode.png" alt="Toggle Light Mode"></a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <main class="contactus">
+        <h1>Contact Us</h1>
+    </main>
+    <div class="div-background">
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <section class="contact-info">
+                <h2>Our Contact Information</h2>
+                <p><strong>Email:</strong> support@gameverse.com</p>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Address:</strong> 123 Gaming Avenue, Nexus City, USA</p>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="contact-form">
+                <h2>Keep in Touch</h2>
+                <form action="#" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+
+            <!-- Map -->
+            <section class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.091603535179!2d-122.41941668469094!3d37.77492977975937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064dfc3d22f%3A0x6e3d5bd5c7f177f5!2sGaming%20Center!5e0!3m2!1sen!2sus!4v1615092637908!5m2!1sen!2sus" 
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+          <p>&copy; 2024 Gameverse</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" class="social-icon">
+              <img src="images/d-f.png" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" class="social-icon">
+              <img src="images/d-t.png" alt="Twitter">
+            </a>
+            <a href="https://www.youtube.com" class="social-icon">
+              <img src="images/d-y.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com" class="social-icon">
+              <img src="images/d-i.png" alt="Instagram">
+            </a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-color: #4c60a8 #1a2032;
+}
+/* General Styles */
+body {
+    margin: 0;
+    color: #333;
+    background-color: #0c081f;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://assets.communitygaming.io/newHomepageVisitor/hero-bg-new.jpg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:top ;
+
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: rgba(0, 0, 0, 0.5);
+  width: 95%; 
+    height: 60px; 
+    padding: 0 20px; 
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; 
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border-radius: 30px;
+    
+}
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8800ffc7;
+}
+
+ 
+  /*Directory page styling*/
+  .main{
+    margin-top: 5%;
+  }
+  .main h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background: linear-gradient(90deg, #90bcff, #13ff90);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .table-container {
+    width: 90%;
+    margin: auto;
+    overflow-x: auto;
+    border: 1px solid #2a2d4e;
+    border-radius: 8px;
+    background-color: #1c1f37;
+    color: #ffffff;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  
+  .tournament-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tournament-table th,
+  .tournament-table td {
+    text-align: left;
+    padding: 15px 15px;
+    border-bottom: 1px solid #2a2d4e;
+
+  }
+  
+  .tournament-table th {
+    background-color: #2a2d4e;
+    font-weight: bold;
+  }
+  
+  .tournament-table td {
+    font-size: 16px;
+  }
+  
+  .tournament-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tournament-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 5px;
+  }
+  
+  .hosted-by {
+    color: #a1a3bc;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  
+  .tournament-table tr:hover {
+    background-color: #24274f;
+  }
+  .footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icon img:hover {
+    transform: scale(1.1);
+  }
+  .image-button img {
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+    border-radius: 20px; /* Optional: Gives rounded corners */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-button img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 0 10px rgb(255, 255, 255); /* Add a glowing effect */
+  }
